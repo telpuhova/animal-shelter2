@@ -1,0 +1,22 @@
+{{#partial "content"}}
+    {{#if animals}}
+        {{#each animals}}
+            Name: {{name}}<br>
+            Gender: {{gender}}<br>
+            Date of Admission: {{dateOfAdmission}}<br>
+            Type: {{type}}<br>
+            Breed: {{breed}}<br>
+            Customer id: {{customerId}}<br>
+            <form action="/adopt/{{id}}" method="get">
+                <label for="customerId">Adopt pet:</label>
+                <input type="number" name="customerId" id="customerId">
+                <button type="submit">Adopt</button>
+            </form>
+            <hr>
+        {{/each}}
+    {{else}}
+        <p>No animals to display</p>
+    {{/if}}
+{{/partial}}
+
+{{>layout.hbs}}

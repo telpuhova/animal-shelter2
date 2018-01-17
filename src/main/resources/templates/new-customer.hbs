@@ -1,0 +1,27 @@
+{{#partial "content"}}
+
+<h3>Add a new customer</h3>
+
+<form action="/new-customer" method="post">
+    <div class="form-group">
+        <label for="name">Enter name</label>
+        <input id="name" name="name" class="form-control" type="text">
+    </div>
+    <div class="form-group">
+        <label for="phone">Enter phone</label>
+        <input id="phone" name="phone" class="form-control" type="text">
+    </div>
+    <div class="form-group">
+        <label for="typePreference">Enter type preference</label>
+        <input id="typePreference" name="typePreference" class="form-control" type="text">
+    </div>
+    <div class="form-group">
+        <label for="breedPreference">Enter breed preference</label>
+        <input id="breedPreference" name="breedPreference" class="form-control" type="text">
+    </div>
+
+    <button type="submit">add</button>
+</form>
+
+{{/partial}}
+{{>layout.hbs}}

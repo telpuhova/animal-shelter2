@@ -6,7 +6,8 @@ CREATE TABLE IF NOT EXISTS animals (
   gender VARCHAR,
   dateOfAdmission VARCHAR,
   type VARCHAR,
-  breed VARCHAR
+  breed VARCHAR,
+  customerId INTEGER
 );
 
 CREATE TABLE IF NOT EXISTS customers (

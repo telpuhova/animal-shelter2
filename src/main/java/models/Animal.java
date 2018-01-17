@@ -10,6 +10,7 @@ public class Animal {
     private String dateOfAdmission;
     private String type;
     private String breed;
+    private int customerId;
 
     public Animal(String name, String gender, String dateOfAdmission, String type, String breed){
         this.name = name;
@@ -17,6 +18,7 @@ public class Animal {
         this.dateOfAdmission = dateOfAdmission;
         this.type = type;
         this.breed = breed;
+        this.customerId = 0;
     }
 
     public String getName() {
@@ -41,6 +43,12 @@ public class Animal {
 
     public int getId() {
         return id;
+    }
+
+    public int getCustomerId() { return customerId; }
+
+    public void setCustomerId (int customerId) {
+        this.customerId = customerId;
     }
 
     public void setId(int id) {

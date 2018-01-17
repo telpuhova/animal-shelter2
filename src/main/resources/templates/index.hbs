@@ -1,0 +1,42 @@
+{{#partial "content"}}
+    <h1>WELCOME TO OUR ANIMAL REFUGE</h1>
+    <h3>Cute animals in need of a home</h3>
+    <form action="/display/by-breed" method="get">
+        <p>See all by breed</p>
+        <div class="form-group">
+            <label for="breed">Enter Breed</label>
+            <input id="breed" name="breed" class="form-control" type="text">
+        </div>
+        <button type="submit">Search</button>
+    </form>
+<hr>
+    <form action="/display/by-type" method="get">
+        <p>See all by type</p>
+        <div class="form-group">
+            <label for="type">Enter Type</label>
+            <input id="type" name="type" class="form-control" type="text">
+        </div>
+        <button type="submit">Search</button>
+    </form>
+<hr>
+<form action="/display/by-breed-preference" method="get">
+    <p>See all customers by breed preference</p>
+    <div class="form-group">
+        <label for="breedPreference">Enter breed preference</label>
+        <input id="breedPreference" name="breedPreference" class="form-control" type="text">
+    </div>
+    <button type="submit">Search</button>
+</form>
+<hr>
+<p><a href="/display/alpha">See all alphabetically</a></p>
+<hr>
+<p><a href="/display/date">See all by date</a></p>
+<hr>
+<p><a href="/new-animal">Add a new animal</a></p>
+<hr>
+<p><a href="/new-customer">Add a new customer</a></p>
+<hr>
+<p><a href="/display-customers">See all customers</a></p>
+{{/partial}}
+
+{{> layout.hbs}}

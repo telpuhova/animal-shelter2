@@ -1,0 +1,31 @@
+{{#partial "content"}}
+
+<h3>Add a new animal</h3>
+
+<form action="/new-animal" method="post">
+    <p>See all by type</p>
+    <div class="form-group">
+        <label for="name">Enter name</label>
+        <input id="name" name="name" class="form-control" type="text">
+    </div>
+    <div class="form-group">
+        <label for="gender">Enter gender</label>
+        <input id="gender" name="gender" class="form-control" type="text">
+    </div>
+    <div class="form-group">
+        <label for="dateOfAdmission">Enter date</label>
+        <input id="dateOfAdmission" name="dateOfAdmission" class="form-control" type="date">
+    </div>
+    <div class="form-group">
+        <label for="type">Enter type</label>
+        <input id="type" name="type" class="form-control" type="text">
+    </div>
+    <div class="form-group">
+        <label for="breed">Enter breed</label>
+        <input id="breed" name="breed" class="form-control" type="text">
+    </div>
+    <button type="submit">add</button>
+</form>
+
+{{/partial}}
+{{>layout.hbs}}

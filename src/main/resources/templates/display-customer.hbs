@@ -1,0 +1,15 @@
+{{#partial "content"}}
+    {{#if customers}}
+        {{#each customers}}
+            Name: {{name}}<br>
+            Phone: {{phone}}<br>
+            Type Preference: {{typePreference}}<br>
+            Breed Preference: {{breedPreference}}
+            <hr>
+        {{/each}}
+    {{else}}
+    <p>No humans to display</p>
+    {{/if}}
+{{/partial}}
+
+{{>layout.hbs}}

@@ -50,4 +50,14 @@ public class Sql2oCustomerDao implements CustomerDao{
                     .executeAndFetchFirst(Customer.class);
         }
     }
+
+    @Override
+    public List<Customer> getByBreedPreference(String breedPreference){
+        String sql = "SELECT * FROM customers WHERE breedPreference = :breedPreference";
+        try (Connection con = sql2o.open()){
+          return con.createQuery(sql)
+                  .addParameter("breedPreference", breedPreference)
+                  .executeAndFetch(Customer.class);
+        }
+    }
 }

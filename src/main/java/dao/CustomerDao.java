@@ -13,4 +13,6 @@ public interface CustomerDao {
     List<Customer> getAll();
 
     Customer findById(int id);
+
+    List<Customer> getByBreedPreference(String breedPreference);
 }

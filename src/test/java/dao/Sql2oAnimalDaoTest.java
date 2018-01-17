@@ -68,4 +68,13 @@ public class Sql2oAnimalDaoTest {
         animalDao.add(animal1);
         assertEquals(2, animalDao.getAll().size());
     }
+
+    @Test
+    public void setCustomerId_setsCustomerId_int() throws Exception {
+        Animal animal = new Animal("Fluffy", "neutral", "01/01/01", "Bunny", "Angora");
+        animalDao.add(animal);
+        Animal foundAnimal = animalDao.findById(animal.getId());
+        foundAnimal.setCustomerId(1);
+        assertEquals(1, foundAnimal.getCustomerId());
+    }
 }
